@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="competencyChart" width="400" height="400"></canvas>
+    <script>
+        const ctx = document.getElementById('competencyChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Product Strategy', 'Cloud Architecture', 'AI/ML Integration', 'Telecommunications', 'Project Execution', 'Leadership'],
+                datasets: [{
+                    label: 'Manoj Monga Competency Profile',
+                    data: [10, 9, 8, 10, 10, 9],
+                    fill: true,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgb(54, 162, 235)',
+                }]
+            }
+        });
+    </script>
+</body>
